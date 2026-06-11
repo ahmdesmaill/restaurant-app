@@ -1,0 +1,25 @@
+html,
+body {
+    margin: 0;
+    font-family: "Smythe", system-ui;
+}
+
+header {
+    height: 167px;
+    background-image: url("./images/banner.png");
+    background-size: cover;
+    padding-left: 46px;
+    color: white;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 46px;
+    margin-bottom: 0;
+    font-size: 39px;
+}
+
+header h2 {
+    margin-top: 8px;
+    font-size: 22px;
+}

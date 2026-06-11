@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+        <!--Smythe font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <h1>Jimmy’s Diner</h1>
+            <h2>The best burgers and pizzas in town.</h2>
+        </header>
+        <main>
+            <!--Menu items section-->
+            <section>
+                <div>
+                    <p>🍕</p>
+                    <h2>Pizza</h2>
+                    <h3>pepperoni,mushrom,mozarella</h3>
+                    <h4>$14</h4>
+                    <button type="button">+</button>
+                </div>
+                <div>
+                    <p>🍔</p>
+                    <h2>Hamburger</h2>
+                    <h3>beef, cheese, lettuce</h3>
+                    <h4>$12</h4>
+                    <button type="button">+</button>
+                </div>
+                <div>
+                    <p>🍺</p>
+                    <h2>Beer</h2>
+                    <h3>grain, hops, yeast, water</h3>
+                    <h4>$12</h4>
+                    <button type="button">+</button>
+                </div>
+            </section>
+
+            <!--Order section-->
+            <section>
+                <h2>Your order</h2>
+                <div>
+                    <h3>Pizza</h3>
+                    <button type="button">remove</button>
+                    <h4>$14</h4>
+                </div>
+                <div>
+                    <h3>Beer</h3>
+                    <button type="button">remove</button>
+                    <h4>$12</h4>
+                </div>
+                <h3>Total price:</h3>
+                <h4>$26</h4>
+                <button type="button">Complete order</button>
+            </section>
+
+            <!--Order info modal-->
+            <dialog>
+                <h2>Enter card details</h2>
+                <form>
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        aria-label="Full name"
+                        required
+                    />
+                    <input
+                        type="number"
+                        placeholder="Enter card number"
+                        aria-label="Card number"
+                        required
+                    />
+                    <input
+                        type="number"
+                        placeholder="Enter CVV"
+                        aria-label="CVV"
+                        required
+                    />
+                    <button type="submit">Pay</button>
+                </form>
+            </dialog>
+
+            <!--Order completed section-->
+            <section>
+                <h2>Thanks, James! Your order is on its way!</h2>
+                <a href="#">You can also click here to order again</a>
+            </section>
+        </main>
+        <script src="main.js" type="module"></script>
+    </body>
+</html>
