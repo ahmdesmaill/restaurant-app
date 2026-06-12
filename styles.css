@@ -111,7 +111,8 @@ button {
     align-items: center;
     justify-content: space-between;
 }
-#complete-order-button {
+#complete-order-button,
+dialog button {
     background-color: #16db99;
     color: white;
     font-size: 16px;
@@ -141,4 +142,34 @@ button {
 #order-completed-section a {
     font-size: 22px;
     color: #065f46;
+}
+
+dialog {
+    margin: auto;
+    position: fixed;
+    inset: 0;
+    border: none;
+    border-radius: 5px;
+    width: 490px;
+    height: 542.24;
+    text-align: center;
+    box-shadow: #000000 5px 5px 255px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+dialog h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 48px;
+    margin-top: 40px;
+}
+dialog input {
+    display: block;
+    margin: 0 auto;
+    padding: 25px 230px 25px 24px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+dialog button {
+    padding: 30px 215px;
+    margin-top: 32px;
 }
