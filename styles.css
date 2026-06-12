@@ -32,7 +32,7 @@ header h2 {
 }
 .menu-item p {
     /* Emoji */
-    font-size: 78px;
+    font-size: 100px;
     opacity: 72%;
 }
 .menu-item h2 {
@@ -47,10 +47,9 @@ header h2 {
 }
 .menu-item button {
     border-radius: 50%;
-    cursor: pointer;
     border: #dedede solid 1.5px;
-    width: 50px;
-    height: 50px;
+    width: 60;
+    height: 60;
     font-size: 34px;
     font-family:
         system-ui,
@@ -64,4 +63,82 @@ header h2 {
     font-weight: 100;
     padding-bottom: 8px;
     margin-left: auto;
+    background-color: transparent;
+    margin-bottom: 50px;
+}
+button {
+    cursor: pointer;
+}
+
+#order-section {
+    margin-top: 45px;
+    padding: 0 45px;
+    /*display: none;*/
+}
+#order-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+#order-items {
+    border-bottom: 2px #393333 solid;
+    padding-bottom: 18px;
+}
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+#order-section h3 {
+    font-size: 28px;
+    margin: 0;
+}
+.order-item button {
+    background-color: transparent;
+    color: #bbbbbb;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    text-decoration: underline;
+    font-size: 12px;
+    padding-top: 5px;
+}
+#order-section h4 {
+    font-size: 20px;
+    margin: 12px 0 12px auto;
+}
+#order-total-price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#complete-order-button {
+    background-color: #16db99;
+    color: white;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: 12px 210px;
+    margin-top: 50px;
+}
+
+#order-completed-section {
+    background-color: #ecfdf5;
+    width: 504px;
+    height: 120px;
+    margin: 50px auto 50px;
+    padding: 1px;
+    text-align: center;
+    color: #065f46;
+}
+
+#order-completed-section h2 {
+    font-size: 32px;
+    margin: 20px 0 18px;
+}
+
+#order-completed-section a {
+    font-size: 22px;
+    color: #065f46;
 }
