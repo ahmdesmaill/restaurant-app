@@ -1,7 +1,13 @@
+:root {
+    --color-primary: #16db99;
+    --font-smythe: "Smythe", system-ui;
+    --font-ui: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 html,
 body {
     margin: 0;
-    font-family: "Smythe", system-ui;
+    font-family: var(--font-smythe);
 }
 
 header {
@@ -29,11 +35,13 @@ header h2 {
     align-items: center;
     padding: 0 46px;
     border-bottom: 1px solid #d2d2d2;
+    height: 200px;
 }
 .menu-item p {
     /* Emoji */
     font-size: 100px;
     opacity: 72%;
+    align-self: center;
 }
 .menu-item h2 {
     font-size: 28px;
@@ -48,18 +56,10 @@ header h2 {
 .menu-item button {
     border-radius: 50%;
     border: #dedede solid 1.5px;
-    width: 60;
-    height: 60;
+    width: 60px;
+    height: 60px;
     font-size: 34px;
-    font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: system-ui, sans-serif;
     font-weight: 100;
     padding-bottom: 8px;
     margin-left: auto;
@@ -70,12 +70,12 @@ button {
     cursor: pointer;
 }
 
-#order-section {
+#order {
     margin-top: 45px;
     padding: 0 45px;
-    /*display: none;*/
+    display: none;
 }
-#order-section h2 {
+#order h2 {
     text-align: center;
     font-size: 28px;
     margin-bottom: 50px;
@@ -89,42 +89,47 @@ button {
     align-items: center;
     gap: 12px;
 }
-#order-section h3 {
+#order h3 {
     font-size: 28px;
     margin: 0;
 }
 .order-item button {
     background-color: transparent;
     color: #bbbbbb;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--font-ui);
     border: none;
     text-decoration: underline;
     font-size: 12px;
     padding-top: 5px;
 }
-#order-section h4 {
+#order h4 {
     font-size: 20px;
     margin: 12px 0 12px auto;
 }
-#order-total-price-container {
+#total-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-#complete-order-button,
-dialog button {
-    background-color: #16db99;
+#order-btn,
+#pay-btn {
+    background-color: var(--color-primary);
     color: white;
     font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--font-ui);
     font-weight: bold;
     border: none;
     border-radius: 3px;
     padding: 12px 210px;
     margin-top: 50px;
 }
-
-#order-completed-section {
+#order-btn {
+    margin-bottom: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#confirmation {
     background-color: #ecfdf5;
     width: 504px;
     height: 120px;
@@ -132,44 +137,57 @@ dialog button {
     padding: 1px;
     text-align: center;
     color: #065f46;
+    display: none;
 }
 
-#order-completed-section h2 {
+#confirmation h2 {
     font-size: 32px;
     margin: 20px 0 18px;
 }
 
-#order-completed-section a {
+#confirmation a {
     font-size: 22px;
     color: #065f46;
 }
 
-dialog {
+#payment-dialog {
     margin: auto;
     position: fixed;
     inset: 0;
     border: none;
     border-radius: 5px;
     width: 490px;
-    height: 542.24;
+    height: 542.24px;
     text-align: center;
     box-shadow: #000000 5px 5px 255px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--font-ui);
 }
-dialog h2 {
+#payment-dialog h2 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 48px;
     margin-top: 40px;
 }
-dialog input {
+#payment-dialog input {
     display: block;
     margin: 0 auto;
     padding: 25px 230px 25px 24px;
     margin-bottom: 20px;
     font-size: 20px;
 }
-dialog button {
+#pay-btn {
     padding: 30px 215px;
     margin-top: 32px;
+}
+#close-dialog {
+    background-color: var(--color-primary);
+    color: white;
+    font-family: var(--font-ui);
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 15px;
 }

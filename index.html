@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jimmy's Diner</title>
         <link rel="stylesheet" href="styles.css" />
-        <!--Smythe font-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -16,91 +18,60 @@
             <h2>The best burgers and pizzas in town.</h2>
         </header>
         <main>
-            <!--Menu items section-->
-            <section>
-                <div class="menu-item">
-                    <p>🍕</p>
-                    <div>
-                        <h2>Pizza</h2>
-                        <h3>pepperoni,mushrom,mozarella</h3>
-                        <h4>$14</h4>
-                    </div>
-                    <button type="button">+</button>
-                </div>
-                <div class="menu-item">
-                    <p>🍔</p>
-                    <div>
-                        <h2>Hamburger</h2>
-                        <h3>beef, cheese, lettuce</h3>
-                        <h4>$12</h4>
-                    </div>
-                    <button type="button">+</button>
-                </div>
-                <div class="menu-item">
-                    <p>🍺</p>
-                    <div>
-                        <h2>Beer</h2>
-                        <h3>grain, hops, yeast, water</h3>
-                        <h4>$12</h4>
-                    </div>
-                    <button type="button">+</button>
-                </div>
-            </section>
+            <section id="menu"></section>
 
-            <!--Order section-->
-            <section id="order-section">
+            <section id="order">
                 <h2>Your order</h2>
-                <div id="order-items">
-                    <div class="order-item">
-                        <h3>Pizza</h3>
-                        <button type="button">remove</button>
-                        <h4>$14</h4>
-                    </div>
-                    <div class="order-item">
-                        <h3>Beer</h3>
-                        <button type="button">remove</button>
-                        <h4>$12</h4>
-                    </div>
-                </div>
-                <div id="order-total-price-container">
+                <div id="order-items"></div>
+                <div id="total-wrapper">
                     <h3>Total price:</h3>
-                    <h4>$26</h4>
+                    <h4 id="total-price">$26</h4>
                 </div>
-                <button type="button" id="complete-order-button">
+                <button type="button" id="order-btn">
                     Complete order
                 </button>
             </section>
 
-            <!--Order info modal-->
-            <dialog open>
+            <dialog id="payment-dialog">
+                <button type="button" id="close-dialog">X</button>
                 <h2>Enter card details</h2>
-                <form>
+                <form id="payment-form">
                     <input
                         type="text"
                         placeholder="Enter your name"
+                        name="fullName"
                         aria-label="Full name"
                         required
                     />
                     <input
-                        type="number"
+                        type="text"
+                        inputmode="numeric"
+                        pattern="[0-9]{13,19}"
+                        maxlength="19"
                         placeholder="Enter card number"
+                        name="cardNumber"
                         aria-label="Card number"
                         required
                     />
                     <input
-                        type="number"
+                        type="text"
+                        inputmode="numeric"
+                        pattern="\d{3,4}"
+                        maxlength="4"
                         placeholder="Enter CVV"
+                        name="cvv"
                         aria-label="CVV"
                         required
                     />
-                    <button type="submit">Pay</button>
+                    <button type="submit" id="pay-btn">Pay</button>
                 </form>
             </dialog>
 
-            <!--Order completed section-->
-            <section id="order-completed-section">
+            <section id="confirmation">
                 <h2>Thanks, James! Your order is on its way!</h2>
-                <a href="#">You can also click here to order again</a>
+                <a href="#" id="order-again"
+                    >You can also click here to order again</a
+                >
             </section>
         </main>
         <script src="main.js" type="module"></script>

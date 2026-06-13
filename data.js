@@ -22,4 +22,9 @@ const menuItems = {
   },
 };
 
-export { menuItems };
+const orderData = {};
+for (const key of Object.keys(menuItems)) {
+  orderData[key] = 0;
+}
+
+export { menuItems, orderData };
